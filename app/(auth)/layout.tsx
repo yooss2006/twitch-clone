@@ -1,4 +1,5 @@
 import React from "react";
+import { Logo } from "./_components/logo";
 
 type Props = {
   children: React.ReactNode;
@@ -6,6 +7,9 @@ type Props = {
 
 export default function layout({ children }: Props) {
   return (
-    <div className="h-full flex items-center justify-center">{children}</div>
+    <div className="h-full flex flex-col items-center justify-center space-y-6">
+      <Logo />
+      {children}
+    </div>
   );
 }
